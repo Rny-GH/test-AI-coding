@@ -1,0 +1,51 @@
+news:
+  # 収集するトピック（WebSearchで使用するキーワード）
+  topics:
+    - "AI 人工知能 最新ニュース"
+    - "テクノロジー IT業界 動向"
+    - "スタートアップ 資金調達"
+    - "経済 ビジネス トレンド"
+    - "科学技術 イノベーション"
+
+  # カテゴリ分類
+  categories:
+    - Technology      # AI、ソフトウェア、ハードウェア
+    - Business        # 経済、企業、市場
+    - Science         # 科学、医療、研究
+    - Society         # 社会、政治、文化
+    - Startup         # スタートアップ、資金調達、M&A
+
+  # 1日の最大収集記事数
+  max_articles_per_day: 30
+
+  # ニュースの言語優先順位（ja=日本語, en=英語）
+  languages:
+    - ja
+    - en
+
+google_drive:
+  # Google Drive フォルダ設定
+  root_folder_id: "1SK3FX_cxmTUubW0HeVHj9MrXgvXUzlRK"
+  root_folder_name: "news-archive"
+  daily_folder_id: "1oLDOHTuLt7J8DhWlo9r5ux8HC56WAEIp"
+  daily_folder_name: "daily"
+  weekly_folder_id: "1HaHP36UX5LpFhMtMLW4fUBRJN6wMQzTR"
+  weekly_folder_name: "weekly"
+
+analysis:
+  # 週次分析の実行日（0=月曜日, 6=日曜日）
+  weekly_day: 0  # 月曜日に先週分を分析
+
+  # 分析で使用するClaudeモデル
+  claude_model: "claude-opus-4-8"
+
+  # キーワード抽出の最大数
+  max_keywords: 30
+
+  # カテゴリ別の重み付け（大局分析の優先度）
+  category_weights:
+    Technology: 1.5
+    Business: 1.3
+    Science: 1.2
+    Startup: 1.4
+    Society: 1.0
